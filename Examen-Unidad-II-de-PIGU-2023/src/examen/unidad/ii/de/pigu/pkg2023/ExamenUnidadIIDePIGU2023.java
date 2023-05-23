@@ -11,19 +11,18 @@ public class ExamenUnidadIIDePIGU2023 {
 //        Alumno alumno1 = new Alumno();
 //        System.out.println("Respuesta de Alumno "+alumno1.Carranza63841());
         DashBoard db = new DashBoard();
-        String ElementosQuimicos = "HIDROGENO\n" +
-"SODIO\n" +
-"ESCANDIO\n" +
-"GALIO\n" +
-"NIOBIO\n" +
-"ANTIMONIO\n" +
-"PROMETIO\n" +
-"LUTECIO\n" +
-"TALIO\n" +
-"PROTACTINIO\n" +
-"MENDELEVIO\n" +
-"ROENTGENIO";
-        db.txt_Area.setText(ElementosQuimicos);
+//        String ElementosQuimicos = "HIDROGENO\n" +
+//"SODIO\n" +
+//"ESCANDIO\n" +
+//"GALIO\n" +
+//"NIOBIO\n" +
+//"ANTIMONIO\n" +
+//"PROMETIO\n" +
+//"LUTECIO\n" +
+//"TALIO\n" +
+//"PROTACTINIO\n" +
+//"MENDELEVIO\n" +
+//"ROENTGENIO";
         db.setVisible(true);
 
     }
