@@ -19,7 +19,7 @@ public class DashBoard extends javax.swing.JFrame {
         this.txt_id.setText(""+(Integer.parseInt(this.ilbd.getText())+1));
         this.ilbd.setVisible(false);
         this.txt_Nombre.requestFocus(true);
-       // ControladorFrameExportar frc = new ControladorFrameExportar(this);
+        ControladorFrameExportar frc = new ControladorFrameExportar(this);
     }
 
     /**
@@ -83,7 +83,7 @@ public class DashBoard extends javax.swing.JFrame {
         jPanel2.add(btn_GuardarArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 430, 120, 40));
 
         btn_BuscarArchivos.setText("Buscar Archivo");
-        jPanel2.add(btn_BuscarArchivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 0, 120, 40));
+        jPanel2.add(btn_BuscarArchivos, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 190, 40));
 
         btn_elinarArchivo.setText("Elimnar");
         jPanel2.add(btn_elinarArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 120, 40));

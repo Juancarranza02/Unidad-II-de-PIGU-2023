@@ -56,6 +56,15 @@ public class ControladorDashboard implements ActionListener, MouseListener{
         }else if(e.getSource() == db.btn_Actualizar){
             edb.Actualizar(filaActual, db);
             
+        }else if(e.getSource() == db.btn_Exportar){
+               if(edb.ExportarInfo()){
+                   JOptionPane.showMessageDialog(db, "Se creo correctamente");
+                   db.Exportar.setLocation(400,0);
+                   db.Exportar.setSize(600, 600);
+                   db.Exportar.setVisible(true);
+               }else{
+                   JOptionPane.showMessageDialog(db, "Error.. Verifique.");
+               }
         }
     }
 

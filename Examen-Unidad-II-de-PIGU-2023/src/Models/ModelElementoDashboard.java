@@ -112,4 +112,28 @@ public class ModelElementoDashboard {
         db.txt_Nombre.requestFocus(true);
     }
     
+    public boolean ExportarInfo() {
+        String ruta = System.getProperty("user.home");
+        String url = ruta+"\\OneDrive\\Escritorio\\tblElementosQumicos.txt";
+        System.out.println("Inico guardar archivo");
+        File archivo = new File(url);
+        PrintWriter escribir;
+        try {
+            escribir = new PrintWriter(archivo);
+            for (ElementoQuimicoDTO quimico : elementos) {
+                escribir.print("ID: "+quimico.getId()+ "  ");
+                escribir.print("Nombre: "+quimico.getNombre() + "  ");
+                escribir.print("Num. Atomico: "+quimico.getNúmero_atómico()+ "  ");
+                escribir.print("Masa Atomica: "+quimico.getMasa_atómica()+ "  ");
+                escribir.print("Simbolo: "+quimico.getSímbolo_químico()+ "  ");
+                escribir.print("Color: "+quimico.getColor()+ "\n");
+            }
+            escribir.close();
+            return true;
+        } catch (FileNotFoundException ex) {
+            System.out.println("Error en crear archivo "+ex.getMessage());
+            return false;
+        }
+    }
+    
 }
