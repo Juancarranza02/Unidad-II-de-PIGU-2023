@@ -79,4 +79,37 @@ public class ModelElementoDashboard {
         }
     }
     
+    public void Actualizar(int filaActual, DashBoard db){
+        if (filaActual != -1){
+            db.txt_recNo.setText(""+db.tblMunicipios.getValueAt(filaActual, 0));
+            db.txt_id.setText("" + db.tblMunicipios.getValueAt(filaActual, 1));
+            db.txt_numAtom.setText("" + db.tblMunicipios.getValueAt(filaActual, 2));
+            db.txt_Nombre.setText("" + db.tblMunicipios.getValueAt(filaActual, 3));
+            db.txt_masa.setText("" + db.tblMunicipios.getValueAt(filaActual, 4));
+            db.txt_simbolo.setText("" + db.tblMunicipios.getValueAt(filaActual, 5));
+            db.txt_color.setText("" + db.tblMunicipios.getValueAt(filaActual, 6));
+
+        }else{
+            System.out.println("Es necesario Seleccionar un registro");
+        }
+    }
+    
+    public void removeRow(int filaActual){
+        if (filaActual != -1){
+           System.out.println(filaActual);
+            JOptionPane.showMessageDialog(null, "Se elimino el registro: "+filaActual);
+           elementos.remove(filaActual);
+        }
+    }
+    
+    public void LimpiarCampos(DashBoard db){
+        int contador = Integer.parseInt(db.ilbd.getText());
+        db.txt_Nombre.setText("");
+        db.txt_masa.setText("");
+        db.txt_numAtom.setText("");
+        db.txt_simbolo.setText("");
+        db.txt_id.setText(""+(contador+1));
+        db.txt_Nombre.requestFocus(true);
+    }
+    
 }

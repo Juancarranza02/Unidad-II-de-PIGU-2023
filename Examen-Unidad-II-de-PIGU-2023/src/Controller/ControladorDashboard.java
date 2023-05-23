@@ -4,9 +4,7 @@
  */
 package Controller;
 
-import DatosDTO.EstadosDTO;
 import Models.ModelElementoDashboard;
-import Models.ModelEstadoDashboard;
 import Views.DashBoard;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -46,11 +44,18 @@ public class ControladorDashboard implements ActionListener, MouseListener{
             int número_atómico = Integer.parseInt(db.txt_numAtom.getText());
             String símbolo_químico = db.txt_simbolo.getText();
             String color = db.txt_color.getText();
-            if(verificar){
                 edb.Aceptar(recNo, id,masa_atómica,número_atómico, símbolo_químico, nombre,color);
                 edb.setDatos(db);
-            }
 
+        }else if(e.getSource() == db.btn_cancelar){
+           edb.LimpiarCampos(db);
+           
+        }else if(e.getSource() == db.btn_Eliminar){
+                 edb.removeRow(filaActual);
+                 edb.setDatos(db);
+        }else if(e.getSource() == db.btn_Actualizar){
+            edb.Actualizar(filaActual, db);
+            
         }
     }
 
@@ -58,6 +63,7 @@ public class ControladorDashboard implements ActionListener, MouseListener{
     public void mouseClicked(MouseEvent e) {
         if(e.getSource() == db.tblMunicipios){
             filaActual = db.tblMunicipios.getSelectedRow();
+            db.txt_id.setText(""+(filaActual+1));
         }
     }
 

@@ -152,7 +152,7 @@ public class DashBoard extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblMunicipios);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 192, 646, 271));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 192, 680, 271));
         getContentPane().add(ilbd, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 73, 74, 22));
 
         btn_Exportar.setText("Exportar ");
